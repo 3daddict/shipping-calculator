@@ -2,13 +2,13 @@
 
 ## Code Setup Details
 
-#####1. Open PHPStorm
+##### 1. Open PHPStorm
 
-#####2. Fork This Repo - IMPORTANT Do this first
+##### 2. Fork This Repo - IMPORTANT Do this first
 
 >- Click on the <kbd> **Fork** </kbd> button in the top right of the page
 
-#####3. Clone This Repo
+##### 3. Clone This Repo
 >1. **After** Forking
 1. In your terminal verify you are in the proper directory
   1. You should be in your `lfz` directory
@@ -19,7 +19,7 @@
 1. Enter the following command into the terminal to clone the `shipping_calculator` repo
   1. `git clone https://github.com/[Your User Name]/shipping_calculator.git`
 
-#####4. Navigate to shipping_calculator
+##### 4. Navigate to shipping_calculator
 
 > Insert this command in the terminal tab
 
@@ -29,7 +29,7 @@
 - If you get an error with the above command its probably because you are already within the correct directory
 - *Reminder* - You can use `pwd` to check your current directory
 
-#####5. Create a feature grouping (*Create feature branch*)
+##### 5. Create a feature grouping (*Create feature branch*)
 
 > Insert & execute these command in the terminal tab individually
 
@@ -81,7 +81,7 @@
         - add a click handler to the radio buttons (all of them) that calls "change_shipping_type"
         - add a click handler to the button that calls "display_shipping"
     - validate_keydown
-      - name: apply_event_handlers
+      - name: validate_keydown
       - purpose: checks the incoming values.  If anything other than a number or period is pressed, it returns false.
       - param: event {object} the object that holds the details of the event
       - return: true if the key pressed is a number or the period key, false if it is not
