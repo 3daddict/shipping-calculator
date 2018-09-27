@@ -34,7 +34,7 @@
                         <label class="label">Weight</label>
                         <div class="field has-addons">
                             <div class="control">
-                                <input class="input" type="text" id="weightInput" placeholder="Enter Weight LBS">
+                                <input class="input" type="text" id="weightInput" placeholder="Enter Weight LBS" onkeyup="return validate_keydown(event,this)">
                             </div>
                             <div class="control">
                                 <a class="button is-link" id="calcBtn">
