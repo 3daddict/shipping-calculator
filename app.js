@@ -17,13 +17,14 @@ let shipping_cost = 0;
 function apply_event_handlers(){
     console.log('apply_event_handlers Triggered');
 
-    $(".checkboxes input").click(function() {
-    console.log('.checkboxes input called.');
-    })
+    // $(".checkboxes input").click(function() {
+    // // console.log('.checkboxes input called.');
+    // })
     $("#calcBtn").click(function() {
         console.log('calcBtn called.');
         calculate_shipping($("#weightInput").val(), shipping_time)
         $("#weightInput").val('');
+        
     })
 }
 
@@ -55,7 +56,18 @@ function validate_keydown(evt, obj) {
 *@return: none
 ********************/
 function change_shipping_type(time){
-    shipping_time = time;
+
+    var currentDate = new Date();
+    var numberOfDaysToAdd = time;
+    currentDate.setDate(currentDate.getDate() + numberOfDaysToAdd); 
+
+    var dd = currentDate.getDate();
+    var mm = currentDate.getMonth() + 1;
+    var y = currentDate.getFullYear();
+
+    var arrival_date = dd + '/'+ mm + '/'+ y;
+    console.log('someFormattedDate = ' + arrival_date);
+
 }
 
 /********************
@@ -85,5 +97,6 @@ function calculate_shipping(weight, shipping_time){
         shipping_cost = shipping_cost * 2;
     }
     console.log("shipping Cost = " + shipping_cost)
+    change_shipping_type(shipping_time);
     
 }
