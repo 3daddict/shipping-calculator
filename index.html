@@ -34,33 +34,35 @@
                         <label class="label">Weight</label>
                         <div class="field has-addons">
                             <div class="control">
-                                <input class="input" type="text" placeholder="Find a repository">
+                                <input class="input" type="text" id="weightInput" placeholder="Enter Weight LBS">
                             </div>
                             <div class="control">
-                                <a class="button is-link">
-                                    Submit
+                                <a class="button is-link" id="calcBtn">
+                                    Calculate
                                 </a>
                             </div>
                         </div>
                         <p class="help">Please enter the items weight in pounds</p>
                         <div class="checkboxes">
                             <label class="checkbox">
-                                <input type="checkbox">
+                                <input type="checkbox" value="5">
                                 5 Day
                             </label>
                             <label class="checkbox">
-                                <input type="checkbox">
+                                <input type="checkbox" value="3">
                                 3 Day
                             </label>
                             <label class="checkbox">
-                                <input type="checkbox">
+                                <input type="checkbox" value="2">
                                 2 Day
                             </label>
                         </div>
                     </div>
                     <div class="field">
                         <div class="control">
-                            <textarea class="textarea is-info" type="text" placeholder="Info textarea"></textarea>
+                            <textarea class="textarea is-info text-area-output" type="text" placeholder="Info textarea"  id="textOutput">
+                                
+                            </textarea>
                         </div>
                     </div>
                 </div>
