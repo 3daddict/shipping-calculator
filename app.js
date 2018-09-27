@@ -17,9 +17,6 @@ let shipping_cost = 0;
 function apply_event_handlers(){
     console.log('apply_event_handlers Triggered');
 
-    // $(".checkboxes input").click(function() {
-    // // console.log('.checkboxes input called.');
-    // })
     $("#calcBtn").click(function() {
         console.log('calcBtn called.');
         calculate_shipping($("#weightInput").val(), shipping_time)
