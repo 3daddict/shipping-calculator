@@ -6,7 +6,8 @@ function AppLoaded() {
     apply_event_handlers();
 }
 
-const shipping_time = 5;
+let shipping_time = 5;
+let shipping_cost = 0;
 
 /********************
 * will add event handlers to all of the appropriate elements
@@ -21,7 +22,9 @@ function apply_event_handlers(){
     })
     $("#calcBtn").click(function() {
         console.log('calcBtn called.');
-        })
+        calculate_shipping($("#weightInput").val(), shipping_time)
+        $("#weightInput").val('');
+    })
 }
 
 
@@ -32,8 +35,8 @@ function apply_event_handlers(){
 ********************/
 
 function validate_keydown(evt, obj) {
-    let inputValue = $("#weightInput").val();
-    console.log('let = ' + inputValue);
+    // let inputValue = $("#weightInput").val();
+    // console.log('let = ' + inputValue);
     let charCode = (evt.which) ? evt.which : event.keyCode
     let value = obj.value;
     let dotcontains = value.indexOf(".") != -1;
@@ -51,9 +54,8 @@ function validate_keydown(evt, obj) {
 @params: none
 *@return: none
 ********************/
-function change_shipping_type(){
-    console.log('change_shipping_type Triggered');
-
+function change_shipping_type(time){
+    shipping_time = time;
 }
 
 /********************
@@ -61,7 +63,27 @@ function change_shipping_type(){
 *@params: weight, shipping_time
 *@return: an object with the following properties and values: arrival_date, weight and cost.
 ********************/
-function calculate_shipping(){
+function calculate_shipping(weight, shipping_time){
+    let arrival_date = '';
     console.log('calculate_shipping Triggered');
 
+    let weightOz = weight * 16;
+
+    if(weightOz <= 20){
+        shipping_cost = (weightOz * 0.02).toFixed(2);
+    } else if(weightOz > 20 && weightOz < 32){
+        shipping_cost = (weightOz * 0.10).toFixed(2);
+    } else if(weightOz >= 32){
+        shipping_cost = (weightOz * 0.20).toFixed(2);
+    }
+
+    if(shipping_time === 5){
+        shipping_cost = shipping_cost * 1;
+    } else if(shipping_time === 3){
+        shipping_cost = shipping_cost * 1.5;
+    } else if(shipping_time === 2){
+        shipping_cost = shipping_cost * 2;
+    }
+    console.log("shipping Cost = " + shipping_cost)
+    
 }
