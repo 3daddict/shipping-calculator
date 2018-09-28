@@ -43,27 +43,52 @@
                         </div>
                         <p class="help">Please enter the items weight in pounds</p>
                     </div>
-                        <div class="checkboxes is-horizontal-center">
+                    <div class="columns">
+                        <div class="checkboxes is-horizontal-center column is-one-quarter">
+                            <p>
                             <label class="checkbox">
                                 <input type="radio" value="5" name="shipping_radio" checked="checked" onclick="change_shipping_type(5)">
                                 5 Day
                             </label>
+                        </p>
+                        <p>
                             <label class="checkbox">
                                 <input type="radio" value="3" name="shipping_radio" onclick="change_shipping_type(3)">
                                 3 Day
                             </label>
+                        </p>
+                        <p>
                             <label class="checkbox">
                                 <input type="radio" value="2" name="shipping_radio" onclick="change_shipping_type(2)">
                                 2 Day
                             </label>
+                        </p>
+
                         </div>
+                        <div class="column">
+                            <div class="info-area">
+                                <p>Weight Entered: </p>
+                            </div>
+                            <div class="info-area">
+                                <p>Est. Arrival Date: </p>
+                            </div>
+                            <div class="info-area">
+                                <p>Total Cost: </p>
+                            </div>
+                        </div>
+
+                        <div class="column">
+                                <div class="info-output">
+                                    <p><span>0</span> oz. (<span>0</span> Lbs.)</p>
+                                </div>
+                                <div class="info-output">
+                                    <p>00/00/0000</p>
+                                </div>
+                                <div class="info-output">
+                                    <p>$000.00 </p>
+                                </div>
+                              </div>
                     </div>
-                    <div class="field">
-                        <div class="control">
-                            <textarea class="textarea is-info text-area-output" type="text" placeholder="Info textarea"  id="textOutput">
-                                
-                            </textarea>
-                        </div>
                     </div>
                 </div>
             </div>
