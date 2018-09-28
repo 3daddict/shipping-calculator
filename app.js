@@ -17,7 +17,7 @@ let weightOz = 0;
  *@return: none
  ********************/
 function apply_event_handlers() {
-    calculateButton() //trigger calculations
+    calculateButton(); //trigger calculations
 }
 
 /********************
@@ -38,6 +38,10 @@ function calculateButton() {
             $("#weightInput").val('');
             $('.btnValidation').removeClass('red');
             calculateData()
+            $('.icon-img').addClass('bounce');
+            setTimeout(function () {
+                $('.icon-img').removeClass('bounce');
+            }, 1000);
         }
     });
 }
@@ -67,6 +71,7 @@ function validate_keydown(evt, obj) {
 *@return: none
 ********************/
 function change_shipping_type(time) {
+    shipping_time = time;
 
     let currentDate = new Date();
     let numberOfDaysToAdd = time;
