@@ -31,53 +31,47 @@
                     </div>
                     <div class="content">
                         <div class="is-horizontal-center">
-                        <div class="field has-addons">
-                            <div class="control in">
-                                <input class="input" type="text" id="weightInput" placeholder="Enter Weight LBS" onkeypress="return validate_keydown(event,this)">
+                            <div class="field has-addons">
+                                <div class="control in">
+                                    <input class="input" type="text" id="weightInput" placeholder="Enter Weight LBS"
+                                        onkeypress="return validate_keydown(event,this)">
+                                </div>
+                                <div class="control">
+                                    <a class="button is-link" id="calcBtn">
+                                        Calculate
+                                    </a>
+                                </div>
                             </div>
-                            <div class="control">
-                                <a class="button is-link" id="calcBtn">
-                                    Calculate
-                                </a>
-                            </div>
+                            <p class="help">Please enter the items weight in pounds</p>
                         </div>
-                        <p class="help">Please enter the items weight in pounds</p>
-                    </div>
-                    <div class="columns">
-                        <div class="checkboxes is-horizontal-center column is-one-quarter">
-                            <p>
+                        <div class="checkboxes container is-fluid is-horizontal-center">
                             <label class="checkbox">
                                 <input type="radio" value="5" name="shipping_radio" checked="checked" onclick="change_shipping_type(5)">
                                 5 Day
                             </label>
-                        </p>
-                        <p>
                             <label class="checkbox">
                                 <input type="radio" value="3" name="shipping_radio" onclick="change_shipping_type(3)">
                                 3 Day
                             </label>
-                        </p>
-                        <p>
                             <label class="checkbox">
                                 <input type="radio" value="2" name="shipping_radio" onclick="change_shipping_type(2)">
                                 2 Day
                             </label>
-                        </p>
-
                         </div>
-                        <div class="column">
-                            <div class="info-area">
-                                <p>Weight Entered: </p>
+                        <div class="columns is-centered data-conatiner">
+                            <div class="column is-two-fifths has-text-right">
+                                <div class="info-area ">
+                                    <p>Weight Entered: </p>
+                                </div>
+                                <div class="info-area">
+                                    <p>Est. Arrival Date: </p>
+                                </div>
+                                <div class="info-area">
+                                    <p>Total Cost: </p>
+                                </div>
                             </div>
-                            <div class="info-area">
-                                <p>Est. Arrival Date: </p>
-                            </div>
-                            <div class="info-area">
-                                <p>Total Cost: </p>
-                            </div>
-                        </div>
 
-                        <div class="column">
+                            <div class="column is-two-fifths">
                                 <div class="info-output">
                                     <p><span>0</span> oz. (<span>0</span> Lbs.)</p>
                                 </div>
@@ -87,11 +81,12 @@
                                 <div class="info-output">
                                     <p>$000.00 </p>
                                 </div>
-                              </div>
-                    </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
+        </div>
         </div>
     </section>
 </body>
