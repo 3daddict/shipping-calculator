@@ -29,4 +29,15 @@
 }
 .data-conatiner{
     display: flex;
+    font-size: 1em;
+}
+
+.red {
+    color: hsl(348, 100%, 61%);
+}
+
+@media only screen and (max-width: 400px) {
+    .data-conatiner{
+    font-size: 0.75em;
+    }
 }
