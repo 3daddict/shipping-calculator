@@ -3,6 +3,13 @@ $(document).ready(AppLoaded)
 
 function AppLoaded() {
     console.log('App is Loaded and Ready');
+    //submit input form on enter
+    $("#weightInput").keypress(function(event) {
+        if (event.keyCode == 13) {
+            $("#calcBtn").click();
+        }
+    });
+
     apply_event_handlers();
 }
 

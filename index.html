@@ -20,7 +20,7 @@
                 <div class="card">
                     <div class="card-image is-flex is-horizontal-center">
                         <figure class="image is-128x128">
-                            <img class="icon-img" src="https://d1nhio0ox7pgb.cloudfront.net/_img/g_collection_png/standard/128x128/delivery_truck.png">
+                            <img class="icon-img" src="./delivery_truck.png">
                         </figure>
                     </div>
                     <div class="card-content">
@@ -37,24 +37,24 @@
                                             onkeypress="return validate_keydown(event,this)">
                                     </div>
                                     <div class="control">
-                                        <a class="button is-link" id="calcBtn">
+                                        <button type="submit" class="button is-link" id="calcBtn">
                                             Calculate
-                                        </a>
+                                        </button>
                                     </div>
                                 </div>
                                 <p class="help btnValidation">Please enter the items weight in pounds</p>
                             </div>
                             <div class="checkboxes container is-fluid is-horizontal-center">
                                 <label class="checkbox">
-                                    <input type="radio" value="5" name="shipping_radio" checked="checked" onclick="change_shipping_type(5)">
+                                    <input class="radioBtn" type="radio" value="5" name="shipping_radio" checked="checked" onclick="change_shipping_type(5)">
                                     5 Day
                                 </label>
                                 <label class="checkbox">
-                                    <input type="radio" value="3" name="shipping_radio" onclick="change_shipping_type(3)">
+                                    <input class="radioBtn" type="radio" value="3" name="shipping_radio" onclick="change_shipping_type(3)">
                                     3 Day
                                 </label>
                                 <label class="checkbox">
-                                    <input type="radio" value="2" name="shipping_radio" onclick="change_shipping_type(2)">
+                                    <input class="radioBtn" type="radio" value="2" name="shipping_radio" onclick="change_shipping_type(2)">
                                     2 Day
                                 </label>
                             </div>

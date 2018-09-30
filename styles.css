@@ -1,5 +1,6 @@
 .wrapper {
-    background-image: url("https://www.toptal.com/designers/subtlepatterns/patterns/qbkls.png")
+    background-image: url("./connectwork.png");
+    height: 100vh;
 }
 
 .is-horizontal-center {
