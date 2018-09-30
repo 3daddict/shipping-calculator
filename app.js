@@ -2,7 +2,6 @@ $(document).ready(AppLoaded)
 
 
 function AppLoaded() {
-    console.log('App is Loaded and Ready');
     //submit input form on enter
     $("#weightInput").keypress(function(event) {
         if (event.keyCode == 13) {
@@ -39,7 +38,6 @@ function calculateButton() {
             $('.btnValidation').addClass('red');
             return false;
         } else {
-            console.log('calcBtn called.');
             $('btn-validation').val('');
             calculate_shipping(inputValidation, shipping_time)
             $("#weightInput").val('');
